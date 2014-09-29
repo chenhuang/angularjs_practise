@@ -131,6 +131,10 @@ function EditCtrl($scope, $location, $routeParams, Projects) {
       prj.name = $scope.project.name;
       prj.description = $scope.project.description;
       prj.site = $scope.project.site;
+      prj.author = $scope.project.author;
+      prj.filesize = $scope.project.filesize;
+      prj.creationdate = $scope.project.creationdate;
+
       $location.path('/');
    };
 }
