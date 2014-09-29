@@ -103,7 +103,7 @@ function ListCtrl($scope, $http, Projects) {
       if (name in $scope.cart_set == false) {
         $scope.cart.push($data);
         $scope.cart_set[name] = true;
-        $scope.cart_size += $data.filesize;
+        $scope.cart_size += parseInt($data.filesize);
       }
   };
 }

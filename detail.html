@@ -21,14 +21,15 @@
 
   <div class="control-group" ng-class="{error: myForm.filesize.$invalid}">
     <label>File Size</label>
-    <input type="text" name="filesize" ng-model="project.filesize" required>
-    <span ng-show="myForm.filesize.$error.required" class="help-inline">Required</span>
+    <input type="number" name="filesize" ng-model="project.filesize" required>
+    <span ng-show="myForm.filesize.$error.required" class="help-inline">A number is required</span>
   </div>
 
   <div class="control-group" ng-class="{error: myForm.creationdate.$invalid}">
     <label>Creation Date</label>
-    <input type="text" name="creationdate" ng-model="project.creationdate" required>
+    <input type="date" name="creationdate" ng-model="project.creationdate" required>
     <span ng-show="myForm.creationdate.$error.required" class="help-inline">Required</span>
+    <span ng-show="myForm.creationdate.$error.date" class="help-inline">Not a valid date</span>
   </div>
 
   <label>Description</label>
